@@ -1,0 +1,117 @@
+
+<html dir="rtl">
+<mat-horizontal-stepper linear #stepper  [selectedIndex]="steeper" >
+  <mat-step  >
+
+      <ng-template matStepLabel  > اسم الماده</ng-template>
+      <mat-form-field  class="ms-3">
+        <mat-label> اسم الماده</mat-label>
+        <input matInput [formControl]="name" placeholder="اسم الماده" required  color="warn" >
+      </mat-form-field>
+        <button  mat-raised-button matStepperNext  color="warn" (click) ="start()"> ابدأ</button>
+
+
+  </mat-step>
+  <mat-step>
+
+      <ng-template matStepLabel  completed="true" >ماده اللغه {{subjectName}} </ng-template>
+      <div class="subjects m-auto w-50"  >
+        <form [formGroup]="questionform">
+       <mat-form-field appearance="outline"  class="w-100"  color="warn" >
+
+        <mat-label> السؤال</mat-label>
+        <input matInput formControlName= "question" type="TEXT"  >
+      </mat-form-field>
+      <div class="row ">
+        <div class=" col-md-5 col-sm-12">
+          <mat-radio-button value="Answer1" (change)="getcorrect($event)"  >  </mat-radio-button>
+          <mat-form-field  class="example-form" color="warn"  >
+               <mat-label> اجابه A</mat-label>
+                <input matInput  type="text" formControlName="Answer1">
+          </mat-form-field>
+        </div>
+        <div class="  col-md-5 col-sm-4 ">
+          <mat-radio-button value="Answer2"  (change)="getcorrect($event)">  </mat-radio-button>
+          <mat-form-field  class="example-form" color="warn" >
+               <mat-label>   اجابهB</mat-label>
+                <input matInput  type="text" formControlName="Answer2" >
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row ">
+        <div class=" col-md-5 col-sm-12">
+          <mat-radio-button value="Answer3"  (change)="getcorrect($event)">  </mat-radio-button>
+          <mat-form-field  class="example-form" color="warn" >
+
+               <mat-label>  اجابهC</mat-label>
+                <input matInput  type="text"  formControlName="Answer3">
+
+          </mat-form-field>
+        </div>
+        <div class="col-md-5 col-sm-12 ">
+          <mat-radio-button value="Answer4"  (change)="getcorrect($event)"> </mat-radio-button>
+          <mat-form-field  class="example-form" color="warn"  >
+               <mat-label>   اجابه D</mat-label>
+                <input matInput  type="text"  formControlName="Answer4">
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="position-relative mt-5">
+        <div class="position-absolute bottom-0 start-0">
+
+          <button mat-raised-button color="accent" class="ms-2" [disabled]="questionform.invalid" (click)="createquestion() ">حفظ</button>
+          <button mat-raised-button color="primary" (click)="delte()">  حذف</button>
+        </div>
+        <div class="position-absolute bottom-0 end-0">
+             <button mat-raised-button  style="background-color:rgb(44, 204, 44) ;" class="ms-2" (click)="submitt()" disabled="{{question.length ? false : true }}"
+             > {{preview ? 'انتهاء' :'عرض'}}</button>
+          <button mat-raised-button color="warn" (click)="cansel()"> الغاء</button>
+        </div>
+      </div>
+        </form>
+      </div>
+</mat-step>
+
+<mat-step>
+    <ng-template matStepLabel> عرض الأختبار</ng-template>
+    <div class="outer">
+      <h5  class="text-danger"> ماده اللغه {{subjectName}}</h5>
+      <div class="row" *ngFor="let item of  question  let index = index "  dir="rtl">
+        <h5> اجابه السؤال {{index +1}}</h5>
+        <div class="sm-12">
+           <p>  a-  الأجابه{{item.Answer1}} </p>
+        </div>
+        <div class="sm-12">
+          <P>  b- الأجابه {{item.Answer2}}</P>
+        </div>
+        <div class="sm-12">
+          <P> c- الأجابه{{item.Answer3}} </P>
+        </div>
+
+
+          <div class="sm-12">
+            <p> d-السؤال {{item.question }}</p>
+          </div>
+          <div class="sm-12">
+            <p class="text-success"> c-الأجابه الصحيحه  {{item. corectanswer}}</p>
+          </div>
+          <div>
+            <button mat-raised-button color="warn" (click)="deleteone(index)" class="mb-2">  حذف</button>
+
+
+        </div>
+        <hr>
+
+      </div>
+  </div>
+
+
+
+
+  </mat-step>
+
+</mat-horizontal-stepper>
+
+</html>

@@ -1,0 +1,188 @@
+{
+  "students": [
+    {
+      "username": "enas",
+      "email": "amar@gmail.com",
+      "password": "1234",
+      "subject": [
+        {
+          "name": "رياضه",
+          "id": 1,
+          "degree": 2
+        },
+        {
+          "name": "رياضه",
+          "id": "1",
+          "degree": 1
+        },
+        {
+          "name": "english",
+          "id": "2",
+          "degree": 1
+        },
+        {
+          "name": "اللغه العربيه",
+          "id": "3",
+          "degree": 1
+        }
+      ],
+      "id": 1
+    },
+    {
+      "username": "amira",
+      "email": "enas@gmail.com",
+      "password": "1234",
+      "subject": [
+        {
+          "name": "english",
+          "id": "2",
+          "degree": 1
+        }
+      ],
+      "id": 2
+    },
+    {
+      "username": "amira",
+      "email": "amira@gmail.com",
+      "password": "1234",
+      "id": 3
+    },
+    {
+      "username": "aboda",
+      "email": "aboda@gmail.com",
+      "password": "1234",
+      "id": 4
+    },
+    {
+      "username": "aboda",
+      "email": "aboda@gmail.com",
+      "password": "1234",
+      "id": 5
+    },
+    {
+      "username": "eman",
+      "email": "eman@gmail.com",
+      "password": "1234",
+      "id": 6
+    },
+    {
+      "username": "eman",
+      "email": "eman@gmail.com",
+      "password": "1234",
+      "id": 7
+    },
+    {
+      "username": "ahmad",
+      "email": "ahmad@com",
+      "password": "1234",
+      "id": 8
+    },
+    {
+      "username": "ahmad",
+      "email": "ahmad@com",
+      "password": "1234",
+      "id": 9
+    },
+    {
+      "username": "ahmad",
+      "email": "emans@gmail.com",
+      "password": "1234",
+      "id": 10
+    },
+    {
+      "username": "amar",
+      "email": "amars@gmail.com",
+      "password": "1234",
+      "id": 11
+    },
+    {
+      "username": "osos",
+      "email": "osos@gmail.com",
+      "password": "1234",
+      "id": 12
+    },
+    {
+      "username": "fadia",
+      "email": "fadia@gmail.com",
+      "password": "1234",
+      "id": 13
+    },
+    {
+      "email": "amor@gmail.com",
+      "password": "1234",
+      "subject": [
+        {
+          "name": "english",
+          "id": "2",
+          "degree": 1
+        }
+      ],
+      "id": 14
+    }
+  ],
+  "doctor": [
+    {
+      "username": "admin",
+      "email": "admin.com",
+      "password": "1234",
+      "id": 1
+    }
+  ],
+  "login": [
+    {
+      "id": 1
+    }
+  ],
+  "subject": [
+    {
+      "name": "رياضه",
+      "question": [
+        {
+          "question": "2*2",
+          "Answer1": "4",
+          "Answer2": "7",
+          "Answer3": "8",
+          "Answer4": "9",
+          "corectanswer": "4"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "name": "english",
+      "question": [
+        {
+          "question": "what is mean angulor",
+          "Answer1": "freamwork",
+          "Answer2": "language",
+          "Answer3": "not that",
+          "Answer4": "both",
+          "corectanswer": "freamwork"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "name": "اللغه العربيه",
+      "question": [
+        {
+          "question": "معني الحب",
+          "Answer1": "الوطن",
+          "Answer2": "الأخوه",
+          "Answer3": "المؤاخاه",
+          "Answer4": "لاشي",
+          "corectanswer": "الأخوه"
+        },
+        {
+          "question": "معني الأنس",
+          "Answer1": "الونس",
+          "Answer2": "الوطن",
+          "Answer3": "ايناس",
+          "Answer4": "لاشس",
+          "corectanswer": "ايناس"
+        }
+      ],
+      "id": 3
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+<mat-toolbar  >
+  <mat-toolbar-row  style="background-color:red ; padding: 20px; color: antiquewhite;">
+    <span   *ngIf="user!==null" style="text-decoration:none ; color: antiquewhite; "   class="ms-5">  {{ user?.username}}</span>
+    <span *ngIf="user==null"  routerLinkActive="active"  > <a   routerLink="/register" style="text-decoration:none ; color: antiquewhite; "  class="ms-3">  تسجيل</a></span>
+    <span *ngIf="user==null"  routerLinkActive="active" > <a  routerLink="/login" style="text-decoration:none ; color: antiquewhite; "   class="ms-3">  دخول</a></span>
+    <span *ngIf="user!==null"   style="text-decoration:none ; color: antiquewhite; "   class="ms-3" (click)="logout()"  routerLinkActive="active">  خروج</span>
+    <span *ngIf="user?.Role== 'doctor' "> <a   routerLink="/exam" style="text-decoration:none ; color: antiquewhite; "  class="ms-3"  routerLinkActive="active">  اختبار جديد</a></span>
+    <span *ngIf="user?.Role== 'doctor'" > <a   routerLink="/list" style="text-decoration:none ; color: antiquewhite; "  class="ms-3"  routerLinkActive="active">   الطلاب</a></span>
+
+    <span *ngIf="user!==null"> <a   routerLink="/subject" style="text-decoration:none ; color: antiquewhite; "  class="ms-3"  routerLinkActive="active">  المواد</a></span>
+     <span class="example-spacer"> </span>
+     <span> <a  style="text-decoration:none ; color: antiquewhite; margin-right: 10px;"   routerLinkActive="active"> فاينال </a></span>
+     <span class="material-icons me-5" >  school </span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+
+

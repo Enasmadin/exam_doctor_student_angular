@@ -1,0 +1,42 @@
+
+<div class="  d-flex justify-content-center outer position-relative ">
+ <div class="name rounded-pill  position-absolute top-0 start-50 translate-middle  "> <h1 class="position-absolute top-50 start-50 translate-middle" > {{subject?.name}}</h1></div>
+
+ <div class="row">
+ <div  *ngFor="let item of  subject?.question  let index = index "  dir="rtl">
+        <strong  > <span  class="text-danger mt-2">اجابه السؤال {{index +1}} : {{item.question}} </span> </strong>
+        <div class="col-sm-12  col-md-5 m-2">
+          <mat-radio-button value="Answer1"  *ngIf="user?.Role=='students' && !showresult  && notrepeatexam " name="{{index}}" value="{{item.Answer1}}" (change)="getcanswer($event)">  </mat-radio-button>
+           <label>  a-  {{item.Answer1}} </label>
+        </div>
+
+        <div class="col-sm-12  col-md-5 m-2">
+          <mat-radio-button value="Answer2"   *ngIf="user?.Role=='students' && !showresult && notrepeatexam " name="{{index}}" value="{{item.Answer2}}"  (change)="getcanswer($event)">  </mat-radio-button>
+           <label> b- {{item.Answer2}} </label>
+        </div>
+        <div class="col-sm-12  col-md-5 m-2">
+          <mat-radio-button value="Answer3"   *ngIf="user?.Role=='students' && !showresult && notrepeatexam  " name="{{index}}" value="{{item.Answer3}}" (change)="getcanswer($event)">  </mat-radio-button>
+           <label>  c- {{item.Answer3}} </label>
+        </div>
+
+        <div class="col-sm-12 col-md-5 m-2">
+          <mat-radio-button value="Answer4"  *ngIf="user?.Role=='students' && !showresult && notrepeatexam  "   name="{{index}}" value="{{item.Answer4}}" (change)="getcanswer($event)">  </mat-radio-button>
+           <label>  d- {{item.Answer4}} </label>
+        </div>
+        <div class="position-relative mt-5" *ngIf="user?.Role=='doctor'">
+          <div class="position-absolute bottom-0 start-0  ">
+            <button mat-raised-button color="warn" (click)="delte(index)" class="mb-2">  حذف</button>
+          </div>
+        </div>
+        <hr>
+       </div>
+       <div class="text-center" *ngIf="user?.Role=='students'">
+        <span *ngIf="showresult || !notrepeatexam " class="text-success "> {{subject.question.length}}/{{total}}</span>
+        <button  type="button" *ngIf="!showresult && notrepeatexam " class="btn btn-success" (click)="getResult()"> النتيجه</button>
+      </div>
+      </div>
+
+  </div>
+
+
+

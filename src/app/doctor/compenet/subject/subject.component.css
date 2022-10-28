@@ -1,0 +1,18 @@
+
+.subject
+{
+  background-color: blue;
+
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: antiquewhite;
+}
+.subject p
+{
+  font-size:50px;
+  color: antiquewhite;
+}
+
+

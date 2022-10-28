@@ -1,0 +1,35 @@
+<div class="example-container mat-elevation-z8 mt-5"  dir="rtl">
+  <mat-table #table [dataSource]="datatable">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="position">
+      <mat-header-cell *matHeaderCellDef> رقم الطالب  </mat-header-cell>
+      <mat-cell *matCellDef="let element , let index= index"> {{index+1}} </mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef> الأسم </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="subjectname">
+      <mat-header-cell *matHeaderCellDef> الماده </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.subjectname}} </mat-cell>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="degree">
+      <mat-header-cell *matHeaderCellDef>  الدرجه </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.degree}} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</div>
+

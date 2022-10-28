@@ -1,0 +1,20 @@
+.outer
+{
+
+
+  margin:  80px auto ;
+  border: 2px solid rgb(223, 216, 216);
+  padding: 30px;
+  position: relative;
+
+
+}
+
+.name
+{
+  width: 50%;
+ height: 40px;
+ background-color: rgb(219, 6, 6);
+ color: aliceblue;
+}
+

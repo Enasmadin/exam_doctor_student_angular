@@ -1,0 +1,18 @@
+ <div  [@openClose]="isOpen ? 'open' : 'closed'" class="open-close-container mt-3" (click)="toggle()">
+<div  dir="rtl" class="row"   >
+<div  class="col-md-3 col-sm-12"  *ngFor="let item of sypject ; let index=index"   routerLink="/exam/{{item.id}}"   >
+ <div >
+  <div class="subject " >
+   <P >{{item.name}} </P>
+ </div>
+
+ <div class="text-center mt-2">
+  <button  *ngIf="user?.Role== 'doctor' " mat-raised-button color="primary" class="ms-2   "    > عرض</button>
+    <button  *ngIf="user?.Role== 'doctor' " mat-raised-button  class="ms-2" color="warn" (click)="delete(index)"> حذف</button>
+    <button  *ngIf="user?.Role=='students'"  class="bg-success "  mat-raised-button > ابدأ الأختبار</button>
+ </div>
+</div>
+ </div>
+</div>
+</div>
+

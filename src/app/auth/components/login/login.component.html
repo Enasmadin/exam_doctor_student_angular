@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+<form class="outer" [formGroup]="loginForm">
+  <div class="selected">
+
+
+<mat-radio-group aria-label="Select an option" (change)="getrole($event)" formControlName="type" >
+  <mat-radio-button value="students" class="select"> طالب </mat-radio-button>
+  <mat-radio-button value="doctor" class="select"> دكتور </mat-radio-button>
+</mat-radio-group>
+</div>
+
+
+  <div class="example-container row" >
+  <mat-form-field appearance="outline" class="email" class="col-sm-8 col-md-5  ">
+    <mat-label> ايميل </mat-label>
+
+    <input matInput placeholder="pat@example.com" type="email" formControlName="email">
+
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="pass_word" class="col-sm-8 col-md-5  " >
+    <mat-label> الباسورد</mat-label>
+    <input matInput  type="password" formControlName="password">
+  </mat-form-field>
+</div>
+
+
+
+
+  <div class="row justify-content-between">
+    <div class="col-sm- col-md-5">
+      <span > <a routerLink="/register" class=""> انشاء حساب ؟ </a></span>
+    </div>
+    <div class="col-sm- col-md-5">
+      <a mat-raised-button target="_blank" color="warn" (click)="submitt()"> تسجيل الدخول </a>
+    </div>
+
+</div>
+</form>
+
+
+
+
+
+
